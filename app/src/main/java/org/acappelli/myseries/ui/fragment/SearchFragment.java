@@ -3,7 +3,6 @@ package org.acappelli.myseries.ui.fragment;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,7 +25,7 @@ import org.acappelli.myseries.bean.search.Search;
 import org.acappelli.myseries.ui.ShowActivity;
 import org.acappelli.myseries.ui.adapter.SearchAdapter;
 
-public class MainActivityFragment extends Fragment {
+public class SearchFragment extends Fragment {
 
     View rootView;
 
@@ -37,7 +36,7 @@ public class MainActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        rootView = inflater.inflate(R.layout.fragment_search, container, false);
         return rootView;
     }
 

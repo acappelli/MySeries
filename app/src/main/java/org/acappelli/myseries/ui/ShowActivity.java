@@ -2,6 +2,7 @@ package org.acappelli.myseries.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 
 import org.acappelli.myseries.R;
 import org.acappelli.myseries.ui.fragment.ShowFragment;
@@ -11,11 +12,17 @@ import org.acappelli.myseries.ui.fragment.ShowFragment;
  */
 public class ShowActivity extends ActionBarActivity {
 
+    Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_show);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
 
         String tvImdb = getIntent().getStringExtra("imdb");
         if (savedInstanceState == null) {
@@ -24,8 +31,9 @@ public class ShowActivity extends ActionBarActivity {
             ShowFragment f = new ShowFragment();
             f.setArguments(bundle);
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, f)
+                    .replace(R.id.container, f)
                     .commit();
+
         }
     }
 }

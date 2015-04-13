@@ -10,4 +10,7 @@
     <color name="divider">#B6B6B6</color>
     <color name="card_background">#2A2A2A</color>
     <color name="color_background">#232323</color>
+    <color name="drawer_background">#1D1D1D</color>
+    <color name="drawer_item_selected">#545454</color>
+
 </resources>
